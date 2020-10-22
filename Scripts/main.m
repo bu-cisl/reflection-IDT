@@ -30,9 +30,8 @@ iFT = @(x) fftshift(ifft2(ifftshift(x)));  % Defines iFFT
 
 %% Set data file location, save date, and save folder name
 file.dPath = 'Insert data location pathway here';
-% file.dPath = 'D:\BU\Programs\Matlab Programs\rIDT\Example Data\Buccal_1';
-file.svDate = '201022';
-file.svLbl = 'Example';
+% file.dPath = 'D:\BU\Programs\Matlab Programs\reflection-IDT\Example Data\HeLa';
+
 
 %% Set microscope, object parameters
 
@@ -64,7 +63,7 @@ obj.tau = [1e3 1e3];  % [Real reg. weight, Imag. Reg. weight]
 %----2. Load, Normalize, and Background-subtract Raw Microscope Images----%
 
 %Obtain data from original files
-load([file.dPath '\Raw Images_flip.mat']);
+load([file.dPath '\Images.mat']);
 
 %filter images, normalize, remove DC
 data = LPFilter_FT(data);
@@ -91,9 +90,8 @@ obj.n = perm2RI(real(obj.phase)/scope.DOF, imag(obj.phase)/scope.DOF, obj.RI(1))
 %-------------------------------------------------------------------------%
 %---------------------5. Data Saving and Plotting-------------------------%
 %% Save Reconstruction Results, reconstruction parameters
-mkdir([file.dPath '\Processed\' file.svDate '\' file.svLbl]);
-save([file.dPath '\Processed\' file.svDate '\' file.svLbl ...
-      '\Recon_Tau=' num2str(obj.tau(1)) '_' num2str(obj.tau(2)),'.mat'],...
+mkdir([file.dPath '\Processed\']);
+save([file.dPath '\Processed\Recon_Tau=' num2str(obj.tau(1)) '_' num2str(obj.tau(2)),'.mat'],...
       'obj','scope','grid','-v7.3');
 
 %% Plot Results
