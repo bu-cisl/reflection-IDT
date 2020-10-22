@@ -18,12 +18,12 @@ The github repository includes the functions and script necessary for running th
 
 To run the demo:
 1. Download this repository to your computer and add them to your path.
-2. Download the raw image data (.m file) from our [Google Drive]().
+2. Download the raw image data (.m file) from our [Google Drive](https://drive.google.com/drive/folders/17C3NKa5S7y0h7c7j0F13WXqM7zFosxqx?usp=sharing).
 3. Open the 'main' script in the 'Scripts' folder.
 4. In section 1. of the file, modify the 'file.dPath' to match the location of the raw image data.
 5. Run the code. 
 
-The file will save the reconstructions in the same location as the raw image data, and a Figure showing the object's recovered complex refractive index contrast will appear.
+The file will save the reconstructions in the same location as the raw image data, and a figure showing the object's recovered complex refractive index contrast will appear.
 If issues arise in the code, you cannot access the data, or some other problem occurs, feel free to contact us or start a new Issue on this repository. 
 
 ## Abstract
