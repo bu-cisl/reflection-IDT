@@ -41,3 +41,6 @@ Reflection phase imaging provides label-free, high-resolution characterization o
 </p>
 
 
+## License
+
+This project is licensed under the terms of the [BSD-3-Clause license](LICENSE).
