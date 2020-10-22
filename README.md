@@ -32,12 +32,12 @@ Reflection phase imaging provides label-free, high-resolution characterization o
 
 ## System Design
 <p align="center">
- <img src="/Figures/SystemOverview.pdf">
+ <img src="/Figures/SystemOverview.png">
 </p>
 
 ## Experimental Results
 <p align="center">
- <img src="/Figures/ExampleResults.pdf">
+ <img src="/Figures/Results.png">
 </p>
 
 
